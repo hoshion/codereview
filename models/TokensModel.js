@@ -29,7 +29,7 @@ class TokensModel {
     }
 
     find(refreshToken){
-        this.array.find(token => token.refreshToken === refreshToken);
+        return this.array.find(token => token.refreshToken === refreshToken);
     }
 }
 
