@@ -1,13 +1,11 @@
-const axios = require('axios');
-const ApiError = require('../api-error');
+const axios = require('axios')
 
 class BTCRateService {
-    async btcRate(){
+  async btcRate () {
+    const response = await axios.get('https://api.coindesk.com/v1/bpi/currentprice/UAH.json')
 
-        const response = await axios.get('https://api.coindesk.com/v1/bpi/currentprice/UAH.json');
-
-        return response.data;
-    }
+    return response.data
+  }
 }
 
-module.exports = new BTCRateService();
+module.exports = new BTCRateService()
